@@ -1,0 +1,119 @@
+.cube-container {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  gap: 10px;
+  order: 11;
+  position: relative;
+  }
+  .cube-img{
+    width:80%;
+    height: 80%;
+    background-image: url("./coffee-cup.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    object-fit: cover;
+    position: absolute;
+    z-index: 2;
+    transition: transform 0.5s;
+
+  }
+  .sallaniyor2{
+    animation: shake2 0.5s infinite;
+  }
+  .icon{
+    display: flex;
+    width: 50px;
+    height: 50px;
+    gap: 10px;
+    top: 10%;
+    left: 8%;
+    color: #61dafb;
+    position: absolute;
+    z-index: 1;
+  }
+  .cube-container button{
+    margin-top: 220px;
+    padding: 40px 50px;
+    background-image: url("dice.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    margin-left: -120px;
+  }
+  .spin{
+    animation: spin .5s;
+  }
+  .cube-container button:hover{
+    transform: scale(1.1);
+  }
+
+  .cube-icon {
+    transition: transform 0.5s;
+  }
+  
+  .cube-icon.sallaniyor {
+    color: black;
+    animation: shake 0.5s infinite;
+    width: 50px;
+    height: 50px;
+    margin-top: 100px;
+    margin-left: 22px;
+  }
+  
+  .shaking {
+    animation: shake 1s;
+  }
+  .shaking2 {
+    animation: shake2 .5s;
+  }
+.btn-title{
+  color: rgb(255, 3, 3);
+  position: absolute;
+  top: 20%;
+  margin-left: 70px;
+  font-size: 28px;
+  font-weight: 600;
+}
+  
+  @keyframes shake {
+    10%, 90% {
+      transform: translate3d(-2px, 0, 0) rotate3d(0, 0, 1, -5deg);
+    }
+    20%, 80% {
+      transform: translate3d(2px, 0, 0) rotate3d(0, 0, 1, 5deg);
+    }
+    30%, 50%, 70% {
+      transform: translate3d(-2px, 0, 0) rotate3d(0, 0, 1, -5deg);
+    }
+    40%, 60% {
+      transform: translate3d(2px, 0, 0) rotate3d(0, 0, 1, 5deg);
+    }
+  }
+  
+  @keyframes shake2 {
+    10%, 90% {
+      transform: translate3d(-5px, 0, 0) rotate3d(0, 0, 1, -1deg);
+    }
+    20%, 80% {
+      transform: translate3d(5px, 0, 0) rotate3d(0, 0, 1, 1deg);
+    }
+    30%, 50%, 70% {
+      transform: translate3d(-5px, 0, 0) rotate3d(0, 0, 1, -1deg);
+    }
+    40%, 60% {
+      transform: translate3d(5px, 0, 0) rotate3d(0, 0, 1, 1deg);
+    }
+  }
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
